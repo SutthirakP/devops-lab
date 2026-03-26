@@ -19,4 +19,4 @@ if __name__ == "__main__":
 
     for income in test_incomes:
         tax = calculate_tax(income)
-        print(f"[RESULT] Income: {income:>10,} THB | Tax: {tax:>10,.2f} THB")
+        print(f"[NEW] Income: {income:>10,} THB | Tax: {tax:>10,.2f} THB")
