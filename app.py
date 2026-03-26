@@ -13,6 +13,13 @@ def calculate_tax(income):
     else:
         return 65000 + (income - 750000) * 0.20
 
+def calculate_deduction(expense_type, amount):
+    deductions = {
+        "insurance": min(amount, 100000),
+        "education": min(amount, 50000),
+        "donation": min(amount, 100000),
+    }
+    return deductions.get(expense_type, 0)
 
 if __name__ == "__main__":
     test_incomes = [100000, 250000, 400000, 600000, 1000000]
